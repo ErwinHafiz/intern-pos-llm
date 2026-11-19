@@ -1,0 +1,29 @@
+{
+  "per_question": {
+    "q1": "RAGFlow mengutip Pasal 1 lengkap + halaman; LightRAG menangkap inti definisi tapi tidak lengkap",
+    "q2": "RAGFlow mengambil pasal daftar sanksi; LightRAG mengambil chunk UU PDP lain sehingga jenis sanksinya tidak tersebut",
+    "q3": "Keduanya menyebut 5 bidang prioritas (di RAGFlow dokumen ini memakai parser Plain Text)",
+    "q4": "Keduanya benar; LightRAG sedikit lebih lengkap soal DPR dan BART",
+    "q5": "LightRAG lebih lengkap (kewajiban Pengendali, sanksi administratif & pidana kedua UU); RAGFlow kurang rinci di sisi UU ITE",
+    "q6": "Keduanya lengkap (komunitas Leiden & map-reduce GraphRAG, dual-level LightRAG)",
+    "q7": "Keduanya tepat untuk perbandingan dataset vs dataset",
+    "q8": "Keduanya hanya menyebut sebagian dari 4 metode; sintesis lintas 6 paper masih sulit",
+    "q9": "Keduanya hanya menyebut sebagian peran (Pengendali/Prosesor/Subjek kurang)",
+    "q10": "Keduanya lengkap: Naive/Advanced/Modular RAG, tantangan, evaluasi"
+  },
+  "key": [
+    "Skor total RAGFlow 4,20 vs LightRAG 3,90 (dari 5). RAGFlow unggul jelas di pertanyaan fakta (4,75 vs 3,50): chunk lebih kecil dengan nomor halaman, sehingga pasal yang spesifik (definisi, daftar sanksi) ikut terambil.",
+    "LightRAG unggul di pertanyaan bandingkan (5,00 vs 4,33): entitas dan relasi graph memberi konteks ringkas per dokumen yang cocok untuk tabel perbandingan, setelah retrieval per dokumen diperlebar.",
+    "Pertanyaan relasional/lintas dokumen seri (3,33 vs 3,33). Hipotesis awal bahwa graph LightRAG unggul di sini belum terbukti pada koleksi 13 dokumen. Keduanya masih lemah saat harus merangkum banyak paper sekaligus (q8), jadi perbaikannya lebih ke strategi agent (multi-query) daripada ganti backend.",
+    "Latensi: RAGFlow rata-rata 24,7 s (median 20,3 s) vs LightRAG 100,2 s (median 37,1 s; satu outlier 648 s). LightRAG memanggil LLM untuk ekstraksi kata kunci di setiap query, ditambah 2 server dan rerank.",
+    "Biaya indexing berbeda karakter: RAGFlow berat di CPU/RAM (DeepDoc + Elasticsearch, sempat membuat Docker macet saat RAM habis); LightRAG berat di token LLM (ekstraksi entitas & relasi per chunk).",
+    "Pelajaran metodologi: dua kali skor LightRAG rendah ternyata karena adapter kita, bukan LightRAG: (1) potongan teks 800 karakter dan penggabungan antar-dataset tanpa skor, (2) filter per dokumen yang mengambil terlalu sedikit kandidat. Setelah diperbaiki dan dievaluasi ulang, skor LightRAG naik dari 3,60 ke 3,90. Selalu periksa jawaban dan adapter sebelum menyimpulkan backend lebih buruk."
+  ],
+  "next": [
+    "Deploy agent ke Google Cloud Vertex AI (Agent Engine / Cloud Run) dengan session service persisten dan secret manager.",
+    "Perbesar evaluasi: lebih banyak pertanyaan per jenis dan beberapa run per pertanyaan agar bisa dibandingkan secara statistik.",
+    "Coba mode LightRAG lain (local/global/hybrid) dan reranker di RAGFlow; ukur pengaruhnya ke pertanyaan relasional.",
+    "Strategi agent multi-query untuk pertanyaan lintas banyak dokumen (q8, q9).",
+    "Batasi memori Elasticsearch/WSL agar parsing DeepDoc stabil di laptop, atau jalankan RAGFlow di server/VM terpisah."
+  ]
+}

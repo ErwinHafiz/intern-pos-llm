@@ -1,0 +1,30 @@
+# Rahasia
+.env
+**/.env
+*.env.bak
+data/.env*.bak
+
+# Tooling lokal
+.claude/
+.superpowers/
+.playwright-mcp/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.adk/
+*.log
+
+# Bukan bagian repo ini
+ragflow/
+_archive/
+
+# Stub kosong dari agent builder
+Research/Web_Search/
+Research/root_agent_azure/
+Research/test_ragflow/
+Research/testragflow/
+Research/model_custom/
+
+# Slide lama (akan diganti)
+smart-library/laporan/*.pptx

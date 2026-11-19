@@ -1,0 +1,13 @@
+.env
+lightrag.env
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.adk/
+.superpowers/
+data/downloads/
+data/lightrag/
+# eval/results/*.json di-commit sebagai bukti hasil
+data/*.log
+data/.env*.bak

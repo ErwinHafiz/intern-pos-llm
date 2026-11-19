@@ -1,0 +1,38 @@
+[project]
+name = "smart-library"
+version = "0.1.0"
+description = "Chatbot dokumen multi-agent: Google ADK + RAGFlow / LightRAG"
+readme = "README.md"
+authors = [
+    { name = "ErwinHafiz" }
+]
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "google-adk==2.14.1",
+    "ragflow-sdk",
+    "httpx",
+    "python-dotenv",
+    "pyyaml",
+    "litellm",
+]
+
+[project.scripts]
+seed = "smart_library.cli.seed:main"
+eval = "smart_library.cli.eval:main"
+lightrag-up = "smart_library.cli.lightrag_up:main"
+
+[dependency-groups]
+dev = ["pytest", "pytest-asyncio", "google-adk[eval]==2.14.1"]
+lightrag = ["lightrag-hku[api]"]
+
+[tool.pytest.ini_options]
+addopts = "-m 'not integration and not eval'"
+asyncio_mode = "auto"
+markers = [
+    "integration: butuh RAGFlow/LightRAG/Azure hidup",
+    "eval: adk eval terhadap agent asli",
+]
+
+[build-system]
+requires = ["uv_build>=0.9.28,<0.10.0"]
+build-backend = "uv_build"

@@ -1,0 +1,92 @@
+# 10 pertanyaan uji, dijawab dari koleksi seed (data/sources.yaml).
+# type: fakta (1 dokumen), compare (2+ target), relasional (lintas dokumen / tema global).
+# expected_points: poin yang memang ada di dokumen sumber; dipakai LLM-judge untuk memberi skor.
+questions:
+  - id: q1
+    type: fakta
+    question: Apa definisi Data Pribadi menurut UU Nomor 27 Tahun 2022?
+    expected_points:
+      - Data tentang orang perseorangan yang teridentifikasi atau dapat diidentifikasi
+      - Secara tersendiri atau dikombinasi dengan informasi lainnya
+      - Baik secara langsung maupun tidak langsung melalui sistem elektronik atau nonelektronik
+
+  - id: q2
+    type: fakta
+    question: Sanksi administratif apa saja yang dapat dikenakan menurut UU Pelindungan Data Pribadi?
+    expected_points:
+      - Peringatan tertulis
+      - Penghentian sementara kegiatan pemrosesan Data Pribadi
+      - Penghapusan atau pemusnahan Data Pribadi
+      - Denda administratif paling tinggi 2% dari pendapatan tahunan
+
+  - id: q3
+    type: fakta
+    question: Apa saja bidang prioritas dalam Strategi Nasional Kecerdasan Artifisial Indonesia 2020-2045?
+    expected_points:
+      - Layanan kesehatan
+      - Reformasi birokrasi
+      - Pendidikan dan riset
+      - Ketahanan pangan
+      - Mobilitas dan kota cerdas
+
+  - id: q4
+    type: fakta
+    question: Apa dua komponen utama model RAG pada paper Lewis et al. 2020 dan apa beda RAG-Sequence dengan RAG-Token?
+    expected_points:
+      - Retriever (DPR, memori non-parametrik berupa indeks vektor Wikipedia)
+      - Generator seq2seq (BART, memori parametrik)
+      - RAG-Sequence memakai dokumen yang sama untuk seluruh urutan jawaban
+      - RAG-Token dapat memakai dokumen berbeda untuk setiap token
+
+  - id: q5
+    type: compare
+    question: "/bandingkan UU PDP vs UU ITE perubahan kedua : kewajiban penyelenggara/pengendali dan sanksinya"
+    expected_points:
+      - UU PDP mengatur kewajiban Pengendali Data Pribadi (dasar pemrosesan, keamanan, notifikasi kegagalan pelindungan)
+      - UU PDP memuat sanksi administratif dan pidana terkait Data Pribadi
+      - UU ITE mengatur Penyelenggara Sistem Elektronik dan informasi/transaksi elektronik
+      - UU ITE perubahan kedua memuat ketentuan pidana terkait konten/perbuatan yang dilarang
+
+  - id: q6
+    type: compare
+    question: "/bandingkan paper LightRAG vs paper GraphRAG : cara keduanya memakai graph untuk retrieval"
+    expected_points:
+      - GraphRAG membangun graph entitas lalu deteksi komunitas (Leiden) dan ringkasan komunitas
+      - GraphRAG menjawab pertanyaan global dengan pola map-reduce atas ringkasan komunitas
+      - LightRAG memakai dual-level retrieval (kata kunci low-level dan high-level) atas graph + vektor
+      - LightRAG menekankan efisiensi dan pembaruan inkremental tanpa membangun ulang graph
+
+  - id: q7
+    type: compare
+    question: "/bandingkan dataset Regulasi Digital ID vs dataset Riset RAG : bagaimana masing-masing membahas data"
+    expected_points:
+      - Regulasi membahas data sebagai objek pelindungan/tata kelola (Data Pribadi, sistem elektronik, SPBE)
+      - Riset RAG membahas data sebagai korpus/sumber pengetahuan yang di-retrieve untuk LLM
+      - Keduanya dikutip dari dokumen masing-masing, bukan pengetahuan umum
+
+  - id: q8
+    type: relasional
+    question: Metode apa saja yang diusulkan paper-paper di dataset Riset RAG untuk mengatasi kelemahan retrieval potongan teks datar?
+    expected_points:
+      - RAPTOR membangun pohon ringkasan rekursif (clustering + summarization) untuk retrieval multi-level
+      - GraphRAG memakai graph entitas dan ringkasan komunitas
+      - LightRAG memakai retrieval berbasis graph dua level
+      - Self-RAG memakai retrieval adaptif dan reflection tokens untuk mengkritik hasil
+
+  - id: q9
+    type: relasional
+    question: Pihak atau peran apa saja yang disebut dalam regulasi Indonesia di koleksi ini terkait pengelolaan data dan sistem elektronik?
+    expected_points:
+      - Pengendali Data Pribadi dan Prosesor Data Pribadi
+      - Subjek Data Pribadi
+      - Penyelenggara Sistem Elektronik
+      - Lembaga penyelenggara pelindungan data pribadi / Menteri / pejabat pelindungan data pribadi
+
+  - id: q10
+    type: relasional
+    question: Apa tantangan atau keterbatasan RAG yang dibahas dalam survei Gao et al. 2023 dan bagaimana paradigma RAG berkembang?
+    expected_points:
+      - Paradigma Naive RAG, Advanced RAG, dan Modular RAG
+      - Tantangan kualitas retrieval (relevansi/presisi, recall) dan halusinasi pada generasi
+      - Augmentasi pada tahap pre-retrieval/post-retrieval (mis. query rewriting, reranking)
+      - Evaluasi RAG (metrik dan benchmark) sebagai area penting

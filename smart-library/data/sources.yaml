@@ -1,0 +1,101 @@
+# Koleksi awal: SEMUA dokumen publik asli dari sumber resmi. File tidak di-commit;
+# `uv run seed` mengunduhnya ke data/downloads/. Jika server menolak unduhan otomatis,
+# seed menampilkan halaman sumber untuk diunduh manual ke data/downloads/<filename>.
+datasets:
+  - name: Regulasi Digital ID
+    description: Regulasi dan kebijakan digital/AI Indonesia, plus satu pembanding kebijakan AI internasional dan data penggunaan internet.
+    documents:
+      - title: UU No. 27 Tahun 2022 tentang Pelindungan Data Pribadi
+        filename: UU Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi.pdf
+        url: https://peraturan.bpk.go.id/Download/224884/UU%20Nomor%2027%20Tahun%202022.pdf
+        page: https://peraturan.bpk.go.id/Details/229798
+        format: pdf
+        source: JDIH BPK RI
+        license: Dokumen hukum publik (UU 28/2014 Pasal 42)
+      - title: UU No. 1 Tahun 2024 tentang Perubahan Kedua atas UU ITE
+        filename: UU Nomor 1 Tahun 2024 tentang Perubahan Kedua UU ITE.pdf
+        url: https://peraturan.bpk.go.id/Download/332870/UU%20Nomor%201%20Tahun%202024.pdf
+        page: https://peraturan.bpk.go.id/Details/274494
+        format: pdf
+        source: JDIH BPK RI
+        license: Dokumen hukum publik (UU 28/2014 Pasal 42)
+      - title: PP No. 71 Tahun 2019 tentang Penyelenggaraan Sistem dan Transaksi Elektronik
+        filename: PP Nomor 71 Tahun 2019 tentang Penyelenggaraan Sistem dan Transaksi Elektronik.pdf
+        url: https://peraturan.bpk.go.id/Download/112816/PP%20Nomor%2071%20Tahun%202019.pdf
+        page: https://peraturan.bpk.go.id/Details/122030
+        format: pdf
+        source: JDIH BPK RI
+        license: Dokumen hukum publik (UU 28/2014 Pasal 42)
+      - title: Perpres No. 95 Tahun 2018 tentang Sistem Pemerintahan Berbasis Elektronik
+        filename: Perpres Nomor 95 Tahun 2018 tentang Sistem Pemerintahan Berbasis Elektronik.pdf
+        url: https://peraturan.bpk.go.id/Download/87472/Perpres%20Nomor%2095%20Tahun%202018.pdf
+        page: https://peraturan.bpk.go.id/Details/96913
+        format: pdf
+        source: JDIH BPK RI
+        license: Dokumen hukum publik (UU 28/2014 Pasal 42)
+      - title: Strategi Nasional Kecerdasan Artifisial Indonesia 2020-2045
+        filename: Strategi Nasional Kecerdasan Artifisial 2020-2045.pdf
+        url: https://karya.brin.go.id/13918/1/Artikel_Michael_PR%20Elektronika_2020.pdf
+        page: https://karya.brin.go.id/13918/
+        format: pdf
+        source: Repositori BRIN (BPPT Press, 2020)
+        license: Hak cipta BPPT - dipakai untuk belajar, tidak didistribusikan ulang
+      - title: AI Policy Guide and Template (National AI Centre, Australia)
+        filename: AI Policy Guide and Template - National AI Centre Australia.docx
+        url: https://www.ai.gov.au/sites/default/files/2026-06/AI-policy-guide-and-template.docx
+        page: https://www.ai.gov.au/staying-safe-and-responsible/essential-ai-practices/create-ai-policy
+        format: docx
+        source: Australian Government, National AI Centre
+        license: Lihat ketentuan hak cipta ai.gov.au
+      - title: Share of the population using the Internet (data ITU)
+        filename: Share of Population Using the Internet - ITU via OWID.csv
+        url: https://ourworldindata.org/grapher/share-of-individuals-using-the-internet.csv?v=1&csvType=full&useColumnShortNames=false
+        page: https://ourworldindata.org/grapher/share-of-individuals-using-the-internet
+        format: csv
+        source: ITU (via Our World in Data)
+        license: CC BY 4.0
+  - name: Riset RAG
+    description: Paper riset utama tentang Retrieval-Augmented Generation (arXiv).
+    documents:
+      - title: Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks (Lewis et al., 2020)
+        filename: RAG - Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks (Lewis 2020).pdf
+        url: https://arxiv.org/pdf/2005.11401
+        page: https://arxiv.org/abs/2005.11401
+        format: pdf
+        source: arXiv
+        license: arXiv non-exclusive license
+      - title: "LightRAG: Simple and Fast Retrieval-Augmented Generation (2024)"
+        filename: LightRAG - Simple and Fast Retrieval-Augmented Generation (2024).pdf
+        url: https://arxiv.org/pdf/2410.05779
+        page: https://arxiv.org/abs/2410.05779
+        format: pdf
+        source: arXiv
+        license: arXiv non-exclusive license
+      - title: "From Local to Global: A Graph RAG Approach to Query-Focused Summarization (2024)"
+        filename: GraphRAG - From Local to Global (2024).pdf
+        url: https://arxiv.org/pdf/2404.16130
+        page: https://arxiv.org/abs/2404.16130
+        format: pdf
+        source: arXiv
+        license: arXiv non-exclusive license
+      - title: "RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval (2024)"
+        filename: RAPTOR - Recursive Abstractive Processing for Tree-Organized Retrieval (2024).pdf
+        url: https://arxiv.org/pdf/2401.18059
+        page: https://arxiv.org/abs/2401.18059
+        format: pdf
+        source: arXiv
+        license: arXiv non-exclusive license
+      - title: "Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection (2023)"
+        filename: Self-RAG - Learning to Retrieve, Generate, and Critique (2023).pdf
+        url: https://arxiv.org/pdf/2310.11511
+        page: https://arxiv.org/abs/2310.11511
+        format: pdf
+        source: arXiv
+        license: arXiv non-exclusive license
+      - title: "Retrieval-Augmented Generation for Large Language Models: A Survey (Gao et al., 2023)"
+        filename: Retrieval-Augmented Generation for LLMs - A Survey (Gao 2023).pdf
+        url: https://arxiv.org/pdf/2312.10997
+        page: https://arxiv.org/abs/2312.10997
+        format: pdf
+        source: arXiv
+        license: arXiv non-exclusive license

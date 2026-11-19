@@ -1,0 +1,170 @@
+{
+ "status": "success",
+ "message": "Query processed successfully",
+ "data": {
+  "entities": [
+   {
+    "entity_name": "Data Pribadi",
+    "entity_type": "concept",
+    "description": "Data about an individual person who is identified or can be identified separately or in combination with other information, either directly or indirectly through electronic or nonelectronic systems.",
+    "source_id": "doc-7cce010dc015a937e6841b4e289c7b7d-chunk-000",
+    "file_path": "sample.md",
+    "created_at": 1795063581
+   },
+   {
+    "entity_name": "Subjek Data Pribadi",
+    "entity_type": "concept",
+    "description": "The individual whose personal data is the subject of protection under the data protection efforts.",
+    "source_id": "doc-7cce010dc015a937e6841b4e289c7b7d-chunk-000",
+    "file_path": "sample.md",
+    "created_at": 1795063581
+   },
+   {
+    "entity_name": "Orang Perseorangan",
+    "entity_type": "concept",
+    "description": "Individual person who is the subject of the Personal Data.",
+    "source_id": "doc-7cce010dc015a937e6841b4e289c7b7d-chunk-000",
+    "file_path": "sample.md",
+    "created_at": 1795063581
+   },
+   {
+    "entity_name": "Pemrosesan Data Pribadi",
+    "entity_type": "concept",
+    "description": "The processing activities conducted on Personal Data.",
+    "source_id": "doc-7cce010dc015a937e6841b4e289c7b7d-chunk-000",
+    "file_path": "sample.md",
+    "created_at": 1795063581
+   },
+   {
+    "entity_name": "Informasi Lainnya",
+    "entity_type": "concept",
+    "description": "Other information used in combination with Personal Data for identification.",
+    "source_id": "doc-7cce010dc015a937e6841b4e289c7b7d-chunk-000",
+    "file_path": "sample.md",
+    "created_at": 1795063581
+   },
+   {
+    "entity_name": "Sistem Elektronik",
+    "entity_type": "concept",
+    "description": "Electronic systems through which personal data can be identified directly or indirectly.",
+    "source_id": "doc-7cce010dc015a937e6841b4e289c7b7d-chunk-000",
+    "file_path": "sample.md",
+    "created_at": 1795063581
+   },
+   {
+    "entity_name": "Pelindungan Data Pribadi",
+    "entity_type": "concept",
+    "description": "The overall effort to protect Personal Data during the processing of such data to guarantee the constitutional rights of the subject of Personal Data.",
+    "source_id": "doc-7cce010dc015a937e6841b4e289c7b7d-chunk-000",
+    "file_path": "sample.md",
+    "created_at": 1795063581
+   }
+  ],
+  "relationships": [
+   {
+    "src_id": "Data Pribadi",
+    "tgt_id": "Pelindungan Data Pribadi",
+    "description": "Pelindungan Data Pribadi is the effort to protect and process Personal Data.",
+    "keywords": "processing,protection",
+    "weight": 1.0,
+    "source_id": "doc-7cce010dc015a937e6841b4e289c7b7d-chunk-000",
+    "file_path": "sample.md",
+    "created_at": 1795063581
+   },
+   {
+    "src_id": "Data Pribadi",
+    "tgt_id": "Orang Perseorangan",
+    "description": "Personal Data is about an individual person who is identified or can be identified individually or combined with other information.",
+    "keywords": "about,identification",
+    "weight": 1.0,
+    "source_id": "doc-7cce010dc015a937e6841b4e289c7b7d-chunk-000",
+    "file_path": "sample.md",
+    "created_at": 1795063581
+   },
+   {
+    "src_id": "Data Pribadi",
+    "tgt_id": "Sistem Elektronik",
+    "description": "Personal Data can be identified either directly or indirectly through electronic systems.",
+    "keywords": "identification,processing",
+    "weight": 1.0,
+    "source_id": "doc-7cce010dc015a937e6841b4e289c7b7d-chunk-000",
+    "file_path": "sample.md",
+    "created_at": 1795063581
+   },
+   {
+    "src_id": "Data Pribadi",
+    "tgt_id": "Informasi Lainnya",
+    "description": "Personal Data can be identified in combination with other information.",
+    "keywords": "combined with",
+    "weight": 1.0,
+    "source_id": "doc-7cce010dc015a937e6841b4e289c7b7d-chunk-000",
+    "file_path": "sample.md",
+    "created_at": 1795063581
+   },
+   {
+    "src_id": "Data Pribadi",
+    "tgt_id": "Sistem Nonelektronik",
+    "description": "Personal Data can be identified either directly or indirectly through nonelectronic systems.",
+    "keywords": "identification,processing",
+    "weight": 1.0,
+    "source_id": "doc-7cce010dc015a937e6841b4e289c7b7d-chunk-000",
+    "file_path": "sample.md",
+    "created_at": 1795063581
+   },
+   {
+    "src_id": "Pelindungan Data Pribadi",
+    "tgt_id": "Pemrosesan Data Pribadi",
+    "description": "Protection of Personal Data involves the entire effort to protect Personal Data during the processing of Personal Data.",
+    "keywords": "processing,protection",
+    "weight": 1.0,
+    "source_id": "doc-7cce010dc015a937e6841b4e289c7b7d-chunk-000",
+    "file_path": "sample.md",
+    "created_at": 1795063581
+   },
+   {
+    "src_id": "Pelindungan Data Pribadi",
+    "tgt_id": "Subjek Data Pribadi",
+    "description": "Pelindungan Data Pribadi aims to guarantee the constitutional rights of the Personal Data subject.",
+    "keywords": "rights guarantee",
+    "weight": 1.0,
+    "source_id": "doc-7cce010dc015a937e6841b4e289c7b7d-chunk-000",
+    "file_path": "sample.md",
+    "created_at": 1795063581
+   }
+  ],
+  "chunks": [
+   {
+    "reference_id": "1",
+    "content": "# Kutipan UU Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi — Pasal 1\n\n1. Data Pribadi adalah data tentang orang perseorangan yang teridentifikasi atau dapat diidentifikasi secara tersendiri atau dikombinasi dengan informasi lainnya baik secara langsung maupun tidak langsung melalui sistem elektronik atau nonelektronik.\n2. Pelindungan Data Pribadi adalah keseluruhan upaya untuk melindungi Data Pribadi dalam rangkaian pemrosesan Data Pribadi guna menjamin hak konstitusional subjek Data Pribadi.",
+    "file_path": "sample.md",
+    "chunk_id": "doc-7cce010dc015a937e6841b4e289c7b7d-chunk-000"
+   }
+  ],
+  "references": [
+   {
+    "reference_id": "1",
+    "file_path": "sample.md"
+   }
+  ]
+ },
+ "metadata": {
+  "query_mode": "mix",
+  "keywords": {
+   "high_level": [
+    "definition",
+    "personal data"
+   ],
+   "low_level": [
+    "data pribadi"
+   ]
+  },
+  "processing_info": {
+   "total_entities_found": 7,
+   "total_relations_found": 7,
+   "entities_after_truncation": 7,
+   "relations_after_truncation": 7,
+   "merged_chunks_count": 1,
+   "final_chunks_count": 1
+  }
+ }
+}
